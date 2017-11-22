@@ -25,6 +25,7 @@ if (jQuery('input[type="hidden"][name="product_id"]').length === 0) {
         }
       }
       $.ajax(settings).done(function (response) {
+          $("#editor-btn").text("Save Changes")
         // console.log(response);
         $.each(response, function (index, value) {
 
