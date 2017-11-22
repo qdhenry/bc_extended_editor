@@ -18,7 +18,7 @@
         "storage"
       ],
   "browser_action": {
-    "default_icon": "icon.png",
+    "default_icon": "bc_logo.png",
     "default_popup": "options.html"
   }
 }

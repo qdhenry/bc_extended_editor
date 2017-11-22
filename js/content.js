@@ -32,9 +32,10 @@ if (jQuery('input[type="hidden"][name="product_id"]').length === 0) {
 
 
 
-            jQuery(".modal-body").prepend("<h2>Test test</h2>")
+            
             $.each(value, function(k, v){
                 $(".modal-body").prepend('<li>'+k + ' : ' + v+'</li>');
+
             });
 
 
@@ -43,7 +44,7 @@ if (jQuery('input[type="hidden"][name="product_id"]').length === 0) {
         });
 
 
-                    jQuery('.productView').prepend('<div id="pop-up-container"><div tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button></div></div></div></div></div>');
+                    jQuery('body').prepend('<div id="pop-up-container"><div tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLongTitle">Product Name</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button></div></div></div></div></div>');
 
 
   });
