@@ -4,13 +4,20 @@
 	<script type="text/javascript" src="options.js"></script>
 </head>
 <body onload="loadOptions()">
-	<h1>Favorite Color</h1>
-	<select id="color">
-		<option value="blue">Blue</option>
-		<option value="red">Red</option>
-		<option value="green">Green</option>
-		<option value="yellow">Yellow</option>
-	</select>
+	<h1>Credentials</h1>
+    <div id="client_details_collection">
+        <form>
+            <input id="auth_token" type="text"  placeholder="auth token"/>
+            <br/>
+            <br/>
+
+        
+
+            <input id="client_id" type="text" placeholder="client id" />
+
+        </form>
+
+    </div>
 	<br />
 	<button onclick="saveOptions()">Save</button>
 	<br />

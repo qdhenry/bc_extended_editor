@@ -7,7 +7,7 @@ if (jQuery('input[type="hidden"][name="product_id"]').length === 0) {
   //Do nothing
 } else {
   jQuery("body").addClass("bc-editor");
-  jQuery(".bc-editor").prepend("<button type='button' id='editor-btn' class='btn btn-primary' data-toggle='modal' data-target='#exampleModalLong'>Edit This Product</button>");
+  jQuery(".bc-editor").prepend("<button type='button' id='editor-btn' class='btn btn-primary' data-toggle='modal' data-target='#exampleModalLong'><i class='fa fa-pencil-square-o' aria-hidden='true'></i><img class='hilogo' src='http://35.196.61.186/wp-content/uploads/2017/10/hiintel2.png'/>&nbsp;Edit This Product</button>");
   var productID = jQuery('input[type="hidden"][name="product_id"]').val();
   var host = window.location.hostname;
   var editURL = "https://" + host + "/admin/index.php?ToDo=editProduct&productId=" + productID;
@@ -25,18 +25,25 @@ if (jQuery('input[type="hidden"][name="product_id"]').length === 0) {
         }
       }
       $.ajax(settings).done(function (response) {
-        console.log(response);
+        // console.log(response);
         $.each(response, function (index, value) {
-            console.log(value);
+
+            jQuery("<div id='contentbody'></div>").appendTo("body");
+
+
+
+            jQuery(".modal-body").prepend("<h2>Test test</h2>")
+            $.each(value, function(k, v){
+                $(".modal-body").prepend('<li>'+k + ' : ' + v+'</li>');
+            });
+
+
+
+          });
         });
-        jQuery("<div id='contentbody'></div>").appendTo(".modal-backdrop.fade.show");
-
-        jQuery('body').html('<div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button></div></div></div></div>');
 
 
-
-      });
-
+                    jQuery('.productView').prepend('<div id="pop-up-container"><div tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true"><div class="modal-dialog" role="document"><div class="modal-content"><div class="modal-header"><h5 class="modal-title" id="exampleModalLongTitle">Modal title</h5><button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button></div><div class="modal-body"></div><div class="modal-footer"><button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button><button type="button" class="btn btn-primary">Save changes</button></div></div></div></div></div>');
 
 
   });
