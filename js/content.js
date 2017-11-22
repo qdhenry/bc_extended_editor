@@ -18,8 +18,8 @@ if (jQuery('input[type="hidden"][name="product_id"]').length === 0) {
         "url": "https://api.bigcommerce.com/stores/kvwmnj0w0e/v3/catalog/products/" + productID ,
         "method": "GET",
         "headers": {
-          "x-auth-token": "17h551fzx5yltf0bnq0anh0fg54qu62",
-          "x-auth-client": "9rub6mo8h2twb31880lxokfox2oqjeb",
+          "x-auth-token": "mzqzgw60p7iz5cpen80ddg79dtehgv5",
+          "x-auth-client": "nz2s2kjiur11c1j5txj6g0x0z542c8x",
           "cache-control": "no-cache",
           "postman-token": "210e0e71-6ed2-c634-9489-089640b7c36b"
         }
@@ -32,7 +32,7 @@ if (jQuery('input[type="hidden"][name="product_id"]').length === 0) {
 
 
 
-            
+
             $.each(value, function(k, v){
                 $(".modal-body").prepend('<li>'+k + ' : ' + v+'</li>');
 
